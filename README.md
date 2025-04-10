@@ -1,2 +1,5 @@
-Investment Analysis Project
-This project involves an in-depth investment analysis using data from CRSP and Kenneth French’s online library. The analysis includes constructing optimal portfolios, assessing risk preferences, testing asset pricing models, and simulating investment strategies.
+# Investment Analysis Project
+
+This repository contains an end-to-end analysis of asset returns and portfolio strategies using CRSP stock data and Fama-French factors. The goal is to implement portfolio optimization, asset pricing tests, and performance evaluation of investment strategies.
+
+## Project Structure
