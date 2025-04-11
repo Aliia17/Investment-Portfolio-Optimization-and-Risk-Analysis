@@ -12,6 +12,13 @@ This repository contains an end-to-end analysis of asset returns and portfolio s
 
 ## Key Results
 
+The following graph depics efficient frontiers allowing/not allowing shorting.
+![Efficient frontier (excess returns)](efrontier.png)
+
+The following 2 graphs showcase capital allocation lines with short/no short allowed.
+![CAL (no short)](CAL_noshort.png)
+![CAL (short allowed)](CAL_short.png)
+
 - Risk aversion levels significantly influence optimal portfolio composition  
 - Fama-MacBeth regressions show statistically significant pricing errors for some factors  
 - Passive investing generally outperformed high-turnover active strategies over the sample period
