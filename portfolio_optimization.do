@@ -45,6 +45,7 @@ bysort year_month: keep if stock_num <= 100
 destring ret, replace
 
 save forcapm.dta
+use forcapm
 
 drop permno shrcd exchcd siccd ticker comnam shrcls prc shrout market_cap siccd_cleaned siccd_num
 
@@ -52,8 +53,10 @@ drop permno shrcd exchcd siccd ticker comnam shrcls prc shrout market_cap siccd_
 
 reshape wide ret, i(year_month) j(stock_num)
 destring ret*, replace force
+
 save ret_reshaped.dta
 
+use ret_reshaped.dta
 *does not plot inefficient part of the efficient frontier
 correlate ret1-ret100
 
@@ -100,7 +103,6 @@ efrontier excess_ret1-excess_ret100
 summarize rfdecimal
 scalar avg_rf = r(mean)
 display "Average Risk-Free Rate: " avg_rf
-
 
 * Generating 2 CML with short allowed and not allowed
 cmline excess_ret* ,rfrate(0.0013566)
